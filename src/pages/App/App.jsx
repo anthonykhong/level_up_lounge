@@ -10,11 +10,15 @@ import NewBlog from "../NewBlog/NewBlog";
 function App() {
   const [user, setUser] = useState(getUser());
 
+  function updateUser(userState) {
+    setUser(userState);
+  }
+
   return (
     <main className="App">
       {user ? (
         <>
-          <NavBar user={user} />
+          <NavBar user={user} updateUser={updateUser} />
           <Routes>
             <Route path="/" element={<BlogPage />} />
             <Route path="/new" element={<NewBlog />} />
