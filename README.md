@@ -37,6 +37,12 @@ Click the following link to be redirected to the planning board of the code! [Tr
 
 ### Wireframe
 
+![WireFrame](https://user-images.githubusercontent.com/116925227/232110441-444c66b8-2438-42a5-9056-5264faa39692.png)
+
+### ERD
+
+![ERD](https://user-images.githubusercontent.com/116925227/232110491-1b018a25-3703-41cb-8029-3170f8215e77.png)
+
 ## :computer: Technologies Used
 
 - ![HTML badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
