@@ -11,10 +11,12 @@ export default function NavBar({ user, updateUser }) {
 
   return (
     <nav className="NavBar">
-      <img src="./public/images/logo.png" />
+      <img className="h-8" src="./public/images/logo.png" />
       &nbsp; &nbsp;
       <div>
-        <Link to="/">Posts</Link>
+        <Link className="white" to="/">
+          Posts
+        </Link>
         &nbsp; &nbsp;
         <Link to="/new">Create Posts</Link>
         &nbsp; &nbsp;

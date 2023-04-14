@@ -5,6 +5,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import AuthPage from "../AuthPage/AuthPage";
 import BlogPage from "../BlogPage/BlogPage";
 import NewBlog from "../NewBlog/NewBlog";
+import "./App.css";
 
 function App() {
   const [user, setUser] = useState(getUser());
