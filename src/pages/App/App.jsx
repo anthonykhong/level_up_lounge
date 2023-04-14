@@ -7,7 +7,7 @@ import BlogPage from "../BlogPage/BlogPage";
 import NewBlog from "../NewBlog/NewBlog";
 
 function App() {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(null);
 
   return (
     <main className="App">
