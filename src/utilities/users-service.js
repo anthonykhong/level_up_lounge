@@ -13,7 +13,6 @@ export async function login(credentials) {
 }
 
 export function getToken() {
-  use;
   const token = localStorage.getItem("token");
   if (!token) return null;
   const payload = JSON.parse(atob(token.split(".")[1]));
