@@ -13,13 +13,15 @@ export default function NavBar({ user, updateUser }) {
     <nav className="NavBar">
       <img src="./public/images/logo.png" />
       &nbsp; &nbsp;
-      <Link to="/">Posts</Link>
-      &nbsp; &nbsp;
-      <Link to="/new">Create Posts</Link>
-      &nbsp; &nbsp;
-      <Link to="" onClick={handleLogOut}>
-        Log Out
-      </Link>
+      <div>
+        <Link to="/">Posts</Link>
+        &nbsp; &nbsp;
+        <Link to="/new">Create Posts</Link>
+        &nbsp; &nbsp;
+        <Link to="" onClick={handleLogOut}>
+          Log Out
+        </Link>
+      </div>
     </nav>
   );
 }
