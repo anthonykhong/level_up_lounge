@@ -67,4 +67,4 @@ Click the following link to be redirected to the planning board of the code! [Tr
 
 - [ ] 
 - [ ] 
-- [ ] .
+- [ ] 
