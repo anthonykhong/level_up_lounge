@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { signUp } from "../../utilities/users-service";
 
 export default function SignUpForm() {
@@ -35,7 +35,7 @@ export default function SignUpForm() {
     <div>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Name</label>
+          <label>Username</label>
           <input
             type="text"
             name="name"
