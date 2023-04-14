@@ -2,14 +2,27 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "../../components/NavBar/NavBar";
+import AuthPage from "../AuthPage/AuthPage";
+import BlogPage from "../BlogPage/BlogPage";
+import NewBlog from "../NewBlog/NewBlog";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [user, setUser] = useState(null);
 
   return (
-    <div className="App">
-      <h1>Level Up Lounge</h1>
-    </div>
+    <main className="App">
+      {user ? (
+        <>
+          <NavBar />
+          <Routes>
+            <Route />
+            <Route />
+          </Routes>
+        </>
+      ) : (
+        <AuthPage />
+      )}
+    </main>
   );
 }
 
