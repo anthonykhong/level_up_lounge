@@ -2,7 +2,7 @@
   
 <img src="https://user-images.githubusercontent.com/116925227/232105248-9d013d14-7e46-4a74-a1f5-7e61e5ccadc9.png" width="30%" height="15%" />
 
-### WELCOME TO YOUR CODING COMMUNITY
+### LEVEL UP YOUR GAMING EXPERIENCE
 
 # Level Up Lounge
 
