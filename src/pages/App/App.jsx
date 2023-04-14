@@ -7,16 +7,16 @@ import BlogPage from "../BlogPage/BlogPage";
 import NewBlog from "../NewBlog/NewBlog";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
 
   return (
     <main className="App">
       {user ? (
         <>
-          <NavBar />
+          <NavBar user={user} />
           <Routes>
-            <Route />
-            <Route />
+            <Route path="/" element={<BlogPage />} />
+            <Route path="/new" element={<NewBlog />} />
           </Routes>
         </>
       ) : (
