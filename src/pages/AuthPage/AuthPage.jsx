@@ -5,8 +5,8 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 export default function AuthPage({ setUser }) {
   const [show, setShow] = useState(false);
   return (
-    <div className="flex flex-row justify-around items-center h-screen">
-      <section>
+    <div className="flex flex-col md:flex-row justify-around items-center h-screen">
+      <section className="flex flex-col">
         <div className="flex items-center justify-even">
           <img className="h-10" src="./public/images/logo.png" />
           &nbsp; &nbsp;
