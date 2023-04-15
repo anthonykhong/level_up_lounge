@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function NewBlog() {
+export default function NewBlog({ user, setUser }) {
   return (
     <div className="flex flex-col justify-center items-center m-10">
       <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 text-5xl mb-16">

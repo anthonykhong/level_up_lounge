@@ -20,8 +20,14 @@ function App() {
         <>
           <NavBar user={user} updateUser={updateUser} />
           <Routes>
-            <Route path="/" element={<BlogPage />} />
-            <Route path="/new" element={<NewBlog />} />
+            <Route
+              path="/"
+              element={<BlogPage user={user} setUser={setUser} />}
+            />
+            <Route
+              path="/new"
+              element={<NewBlog user={user} setUser={setUser} />}
+            />
           </Routes>
         </>
       ) : (
