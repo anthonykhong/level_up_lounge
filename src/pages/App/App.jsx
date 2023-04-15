@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import NavBar from "../../components/NavBar/NavBar";
 import AuthPage from "../AuthPage/AuthPage";
+import HomePage from "../HomePage/HomePage";
 import BlogPage from "../BlogPage/BlogPage";
 import NewBlog from "../NewBlog/NewBlog";
 import "./App.css";
@@ -20,6 +21,7 @@ function App() {
         <>
           <NavBar user={user} updateUser={updateUser} />
           <Routes>
+            <Route path="/" element={<HomePage />} />
             <Route
               path="/posts"
               element={<BlogPage user={user} setUser={setUser} />}
