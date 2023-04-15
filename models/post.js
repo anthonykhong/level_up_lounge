@@ -11,7 +11,6 @@ const commentSchema = new Schema(
       ref: "User",
     },
     userName: String,
-    userAvatar: String,
     date: {
       type: Date,
       default: Date.now,

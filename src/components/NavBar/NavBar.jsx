@@ -16,14 +16,14 @@ export default function NavBar({ user, updateUser }) {
       <div>
         <Link
           className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
-          to="/"
+          to="/posts"
         >
           Posts
         </Link>
         &nbsp; &nbsp;
         <Link
           className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
-          to="/new"
+          to="/posts/new"
         >
           Create Posts
         </Link>

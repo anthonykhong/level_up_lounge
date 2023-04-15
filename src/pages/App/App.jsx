@@ -21,11 +21,11 @@ function App() {
           <NavBar user={user} updateUser={updateUser} />
           <Routes>
             <Route
-              path="/"
+              path="/posts"
               element={<BlogPage user={user} setUser={setUser} />}
             />
             <Route
-              path="/new"
+              path="/posts/new"
               element={<NewBlog user={user} setUser={setUser} />}
             />
           </Routes>
