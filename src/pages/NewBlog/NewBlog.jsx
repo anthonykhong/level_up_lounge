@@ -42,7 +42,7 @@ export default function NewBlog() {
           ></textarea>
         </div>
         <div class="flex items-center justify-center">
-          <a href="">
+          <a href="/">
             <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-300 to-blue-600 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
               <input
                 type="submit"
