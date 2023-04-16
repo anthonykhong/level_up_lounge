@@ -11,7 +11,7 @@ export function getPost(id) {
 }
 
 export function createPost(postData) {
-  return sendRequest(`${BASE_URL}`, "POST", postData);
+  return sendRequest(`${BASE_URL}/new`, "POST", postData);
 }
 
 export function deletePost(id) {
