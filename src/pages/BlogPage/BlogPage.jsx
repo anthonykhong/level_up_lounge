@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as postsAPI from "../../utilities/posts-api";
 import NewBlog from "../NewBlog/NewBlog";
+import PostsList from "../../components/PostsList/PostsList";
 import "./BlogPage.css";
 
 export default function BlogPage({ user, setUser }) {
   const navigate = useNavigate();
+  const [posts, setPosts] = useState([]);
 
   function handleCreatePostClick() {
     navigate("/posts/new");
@@ -27,6 +29,7 @@ export default function BlogPage({ user, setUser }) {
           Create Post
         </button>
       </div>
+      <PostsList posts={posts} />
     </div>
   );
 }
