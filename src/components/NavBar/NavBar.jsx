@@ -30,13 +30,6 @@ export default function NavBar({ user, updateUser }) {
         &nbsp; &nbsp;
         <Link
           className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
-          to="/posts/new"
-        >
-          Create Posts
-        </Link>
-        &nbsp; &nbsp;
-        <Link
-          className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
           to=""
           onClick={handleLogOut}
         >

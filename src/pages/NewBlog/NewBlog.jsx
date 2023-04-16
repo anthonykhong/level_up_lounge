@@ -1,11 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function NewBlog({ user, setUser }) {
+  const navigate = useNavigate();
+
+  function handleCancelPostClick() {
+    navigate("/posts");
+  }
+
   return (
     <div className="flex flex-col justify-center items-center m-10">
       <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 text-5xl mb-16">
         New Post
       </h1>
+      <div className="py-2 ml-auto">
+        <button
+          className="px-4 py-2 rounded-md bg-gradient-to-br from-purple-300 to-blue-600 text-white font-medium"
+          onClick={handleCancelPostClick}
+        >
+          Cancel
+        </button>
+      </div>
       <form
         className="border border-4 border-indigo-500/75 rounded-xl w-full py-10 px-20"
         id="new-post"
