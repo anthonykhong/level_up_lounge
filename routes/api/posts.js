@@ -3,26 +3,18 @@ const router = express.Router();
 const postsCtrl = require("../../controllers/api/posts");
 
 // GET all posts
-router.get("/posts", (req, res) => {
-  res.json({ mssg: "Get all posts" });
-});
+router.get("/posts", postsCtrl.allPosts);
 
 // GET one post
-router.get("/posts/:id", (req, res) => {
-  res.json({ mssg: "Get one post" });
-});
+router.get("/posts/:id", postsCtrl.getPost);
 
 // POST a new post
 router.post("/posts", postsCtrl.createPost);
 
 // DELETE a post
-router.delete("/posts/:id", (req, res) => {
-  res.json({ mssg: "DELETE a post" });
-});
+router.delete("/posts/:id", postsCtrl.deletePost);
 
 // EDIT a post
-router.patch("/posts/:id", (req, res) => {
-  res.json({ mssg: "EDIT a post" });
-});
+router.patch("/posts/:id", postsCtrl.updatePost);
 
 module.exports = router;
