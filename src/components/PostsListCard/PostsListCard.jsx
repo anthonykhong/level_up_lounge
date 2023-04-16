@@ -4,7 +4,8 @@ import "./PostsListCard.css";
 export default function PostsListCard({ post }) {
   return (
     <>
-      <h1>Post</h1>
+      <h3>{post.title}</h3>
+      <p>{post.content}</p>
     </>
   );
 }
