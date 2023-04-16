@@ -14,10 +14,10 @@ export function createPost(postData) {
   return sendRequest(`${BASE_URL}`, "POST", postData);
 }
 
-export function deletePost() {
-  return sendRequest(`${BASE_URL}/${id}`);
+export function deletePost(id) {
+  return sendRequest(`${BASE_URL}/${id}`, "DELETE");
 }
 
-export function updatePost() {
-  return sendRequest(`${BASE_URL}/${id}`);
+export function updatePost(id, postData) {
+  return sendRequest(`${BASE_URL}/${id}`, "PATCH", postData);
 }

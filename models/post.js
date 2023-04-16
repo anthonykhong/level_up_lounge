@@ -43,7 +43,7 @@ const postSchema = new Schema(
     comments: [commentSchema],
   },
   {
-    Timestamps: true,
+    timestamps: true,
   }
 );
 
