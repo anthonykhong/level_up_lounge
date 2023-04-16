@@ -35,32 +35,34 @@ export default function LoginForm({ setUser }) {
           <h2 className="flex justify-center font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 text-xl pb-5">
             Login
           </h2>
-          <label class="block text-gray-700 font-bold mb-2 pt-2">Email</label>
+          <label className="block text-gray-700 font-bold mb-2 pt-2">
+            Email
+          </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             name="email"
             value={credentials.email}
             onChange={handleChange}
             required
           />
-          <label class="block text-gray-700 font-bold mb-2 pt-2">
+          <label className="block text-gray-700 font-bold mb-2 pt-2">
             Password
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
             name="password"
             value={credentials.password}
             onChange={handleChange}
             required
           />
-          <div class="flex items-center justify-center pt-4">
+          <div className="flex items-center justify-center pt-4">
             <button
               className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-300 to-blue-600 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
               type="submit"
             >
-              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Log In
               </span>
             </button>
