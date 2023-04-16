@@ -10,6 +10,20 @@ export default function NewBlog({ user, setUser }) {
     navigate("/posts");
   }
 
+  async function handleSubmit(event) {
+    event.preventDefault();
+    try {
+      await postsAPI.createPost(postData);
+      navigate("/posts");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  function handleChange(event) {
+    setPostData({ ...postData, [event.target.name]: event.target.value });
+  }
+
   return (
     <div className="flex flex-col justify-center items-center m-10">
       <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 text-5xl mb-16">
@@ -26,6 +40,7 @@ export default function NewBlog({ user, setUser }) {
       <form
         className="border border-4 border-indigo-500/75 rounded-xl w-full py-10 px-20"
         id="new-post"
+        onSubmit={handleSubmit}
       >
         <div className="max-w-lg">
           <label
@@ -39,6 +54,8 @@ export default function NewBlog({ user, setUser }) {
             name="title"
             id="small-input"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            value={postData.title}
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -54,6 +71,8 @@ export default function NewBlog({ user, setUser }) {
             id="large-input"
             placeholder="Enter text..."
             className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            value={postData.content}
+            onChange={handleChange}
           ></textarea>
         </div>
         <div className="flex items-center justify-center">
