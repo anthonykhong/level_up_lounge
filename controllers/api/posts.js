@@ -20,7 +20,10 @@ async function getPost(req, res) {
 
 async function createPost(req, res) {
   try {
-    const post = await Post.create(req.body);
+    const post = await Post.create({
+      ...req.body,
+      user: req.user._id,
+    });
     res.json(post);
   } catch (error) {
     res.status(500).json(error);
