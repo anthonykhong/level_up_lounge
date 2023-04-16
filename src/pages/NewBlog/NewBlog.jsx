@@ -12,17 +12,17 @@ export default function NewBlog({ user, setUser }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log(posts);
-    try {
-      await postsAPI.createPost(newPost);
-      navigate("/posts");
-    } catch (error) {
-      console.log(error);
-    }
+    console.log(newPost);
+    // try {
+    //   await postsAPI.createPost(newPost);
+    //   navigate("/posts");
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }
 
   function handleChange(event) {
-    setPostData({ ...postData, [event.target.name]: event.target.value });
+    setNewPost({ ...newPost, [event.target.name]: event.target.value });
   }
 
   return (
