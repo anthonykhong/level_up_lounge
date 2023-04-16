@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import * as postsAPI from "../../utilities/posts-api";
+import * as postsService from "../../utilities/posts-service";
 
 export default function NewBlog({ user, setUser }) {
   const navigate = useNavigate();
@@ -12,13 +12,13 @@ export default function NewBlog({ user, setUser }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log(newPost);
-    // try {
-    //   await postsAPI.createPost(newPost);
-    //   navigate("/posts");
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    // console.log(newPost);
+    try {
+      await postsService.createNewPost(newPost);
+      setNewPost(newPost);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   function handleChange(event) {
@@ -77,7 +77,7 @@ export default function NewBlog({ user, setUser }) {
           ></textarea>
         </div>
         <div className="flex items-center justify-center">
-          <a href="/">
+          <a>
             <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-300 to-blue-600 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
               <input
                 type="submit"
