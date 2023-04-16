@@ -42,7 +42,7 @@ export default function SignUpForm() {
           <h2 className="flex justify-center font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 text-xl pb-5">
             Create Account
           </h2>
-          <label class="block text-gray-700 font-bold mb-2 pt-2">
+          <label className="block text-gray-700 font-bold mb-2 pt-2">
             Username
           </label>
           <input
@@ -53,7 +53,9 @@ export default function SignUpForm() {
             onChange={handleChange}
             required
           />
-          <label class="block text-gray-700 font-bold mb-2 pt-2">Email</label>
+          <label className="block text-gray-700 font-bold mb-2 pt-2">
+            Email
+          </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
@@ -62,7 +64,7 @@ export default function SignUpForm() {
             onChange={handleChange}
             required
           />
-          <label class="block text-gray-700 font-bold mb-2 pt-2">
+          <label className="block text-gray-700 font-bold mb-2 pt-2">
             Password
           </label>
           <input
@@ -73,7 +75,9 @@ export default function SignUpForm() {
             onChange={handleChange}
             required
           />
-          <label class="block text-gray-700 font-bold mb-2 pt-2">Confirm</label>
+          <label className="block text-gray-700 font-bold mb-2 pt-2">
+            Confirm
+          </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
@@ -88,7 +92,7 @@ export default function SignUpForm() {
               type="submit"
               disabled={disable}
             >
-              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 SIGN UP
               </span>
             </button>

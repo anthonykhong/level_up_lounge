@@ -28,7 +28,7 @@ export default function LoginForm({ setUser }) {
     <div className="flex justify-center items-center">
       <div>
         <form
-          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           autoComplete="off"
           onSubmit={handleSubmit}
         >
