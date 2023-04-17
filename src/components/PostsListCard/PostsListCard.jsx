@@ -1,11 +1,16 @@
 import React from "react";
 import "./PostsListCard.css";
 
-export default function PostsListCard({ post }) {
+export default function PostsListCard({ post, handleDeletePost }) {
+  function handleDelete() {
+    handleDeletePost(post._id);
+  }
+
   return (
     <div className="flex flex-col border rounded-lg m-8 p-10 ">
       <h3>{post.title}</h3>
       <p>{post.content}</p>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as postsAPI from "../../utilities/posts-api";
+import NewBlogForm from "../../components/NewBlogForm/NewBlogForm";
 
 export default function NewBlog({ posts, setPosts }) {
   const navigate = useNavigate();

@@ -17,6 +17,15 @@ export default function BlogPage({ user, setUser }) {
     fetchPosts();
   }, []);
 
+  async function handleDeletePost(id) {
+    try {
+      await postsAPI.deletePost(id);
+      setPosts(posts.filter((post) => post._id !== id));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   function handleCreatePostClick() {
     navigate("/posts/new");
   }
@@ -38,7 +47,7 @@ export default function BlogPage({ user, setUser }) {
           onClick={handleCreatePostClick}
         ></input>
       </div>
-      <PostsList posts={posts} />
+      <PostsList posts={posts} handleDeletePost={handleDeletePost} />
     </div>
   );
 }
