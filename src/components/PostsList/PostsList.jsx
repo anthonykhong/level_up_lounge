@@ -2,7 +2,12 @@ import React from "react";
 import "./PostsList.css";
 import PostsListCard from "../PostsListCard/PostsListCard";
 
-export default function PostsList({ user, posts, handleDeletePost }) {
+export default function PostsList({
+  user,
+  posts,
+  handleDeletePost,
+  handleEditPost,
+}) {
   return (
     <>
       <main className="flex justify-center flex-col">
@@ -11,6 +16,7 @@ export default function PostsList({ user, posts, handleDeletePost }) {
             post={p}
             user={user}
             handleDeletePost={handleDeletePost}
+            handleEditPost={handleEditPost}
             index={idx}
             key={idx}
           />

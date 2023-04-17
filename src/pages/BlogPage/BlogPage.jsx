@@ -26,6 +26,10 @@ export default function BlogPage({ user, setUser }) {
     }
   }
 
+  function handleEditPost(id) {
+    navigate(`/posts/${id}/edit`);
+  }
+
   function handleCreatePostClick() {
     navigate("/posts/new");
   }
@@ -51,6 +55,7 @@ export default function BlogPage({ user, setUser }) {
         user={user}
         posts={posts}
         handleDeletePost={handleDeletePost}
+        handleEditPost={handleEditPost}
       />
     </div>
   );

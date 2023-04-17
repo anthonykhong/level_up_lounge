@@ -1,9 +1,18 @@
 import React from "react";
 import "./PostsListCard.css";
 
-export default function PostsListCard({ user, post, handleDeletePost }) {
+export default function PostsListCard({
+  user,
+  post,
+  handleDeletePost,
+  handleEditPost,
+}) {
   function handleDelete() {
     handleDeletePost(post._id);
+  }
+
+  function handleEdit() {
+    handleEditPost(post._id);
   }
 
   return (
@@ -12,6 +21,7 @@ export default function PostsListCard({ user, post, handleDeletePost }) {
       <h3>{post.title}</h3>
       <p>{post.content}</p>
       <p>{post.date}</p>
+      <button onClick={handleEdit}>Edit</button>
       <button onClick={handleDelete}>Delete</button>
     </div>
   );

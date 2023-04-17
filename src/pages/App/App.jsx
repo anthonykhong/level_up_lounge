@@ -6,6 +6,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import HomePage from "../HomePage/HomePage";
 import BlogPage from "../BlogPage/BlogPage";
 import NewBlog from "../NewBlog/NewBlog";
+import EditBlog from "../../components/EditBlog/EditBlog";
 import "./App.css";
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
             <Route
               path="/posts/new"
               element={<NewBlog user={user} setUser={setUser} />}
+            />
+            <Route
+              path="/posts/:id/edit"
+              element={<EditBlog user={user} setUser={setUser} />}
             />
           </Routes>
         </>
