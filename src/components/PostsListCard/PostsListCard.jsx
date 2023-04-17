@@ -1,4 +1,5 @@
 import React from "react";
+import CommentPage from "../../pages/CommentPage/CommentPage";
 import "./PostsListCard.css";
 
 export default function PostsListCard({
@@ -50,6 +51,7 @@ export default function PostsListCard({
         <h3 className="text-lg font-semibold">{post.title}</h3>
         <p className="mt-2 text-gray-500">{post.content}</p>
       </div>
+      <CommentPage />
     </div>
   );
 }
