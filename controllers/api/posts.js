@@ -2,7 +2,7 @@ const Post = require("../../models/post");
 
 async function allPosts(req, res) {
   try {
-    const posts = await Post.find();
+    const posts = await Post.find({});
     res.json(posts);
   } catch (error) {
     res.status(500).json(error);
@@ -19,15 +19,9 @@ async function getPost(req, res) {
 }
 
 async function createPost(req, res) {
-  try {
-    const post = await Post.create({
-      ...req.body,
-      user: req.user._id,
-    });
-    res.json(post);
-  } catch (error) {
-    res.status(500).json(error);
-  }
+  req.body.user = req.user._id;
+  const post = await Post.create(req.body);
+  res.json(post);
 }
 
 async function updatePost(req, res) {
