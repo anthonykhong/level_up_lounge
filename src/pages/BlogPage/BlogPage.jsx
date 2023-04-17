@@ -10,6 +10,7 @@ export default function BlogPage({ user, setUser }) {
 
   async function fetchPosts() {
     const allPosts = await postsAPI.allPosts();
+    console.log("all", allPosts);
     setPosts(allPosts);
   }
 
