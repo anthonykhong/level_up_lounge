@@ -7,6 +7,7 @@ export default function PostsList({
   posts,
   handleDeletePost,
   handleEditPost,
+  handleAddLike,
 }) {
   return (
     <>
@@ -17,6 +18,7 @@ export default function PostsList({
             user={user}
             handleDeletePost={handleDeletePost}
             handleEditPost={handleEditPost}
+            handleAddLike={handleAddLike}
             index={idx}
             key={idx}
           />

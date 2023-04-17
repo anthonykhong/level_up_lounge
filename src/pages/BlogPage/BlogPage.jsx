@@ -34,6 +34,17 @@ export default function BlogPage({ user, setUser }) {
     navigate("/posts/new");
   }
 
+  async function handleAddLike(id) {
+    try {
+      const updatedPost = await postsAPI.addLike(id);
+      setPosts(
+        posts.map((post) => (post._id === updatedPost._id ? updatedPost : post))
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div>
       <div>
@@ -56,6 +67,7 @@ export default function BlogPage({ user, setUser }) {
         posts={posts}
         handleDeletePost={handleDeletePost}
         handleEditPost={handleEditPost}
+        handleAddLike={handleAddLike}
       />
     </div>
   );

@@ -15,6 +15,12 @@ const commentSchema = new Schema(
       type: Date,
       default: Date.now,
     },
+    likes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
     timestamps: true,
@@ -42,6 +48,12 @@ const postSchema = new Schema(
       default: Date.now,
     },
     comments: [commentSchema],
+    likes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
     timestamps: true,

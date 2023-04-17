@@ -17,4 +17,7 @@ router.delete("/:id", postsCtrl.deletePost);
 // EDIT a post
 router.patch("/:id", postsCtrl.updatePost);
 
+// ADD a like to a post
+router.post("/:id/like", postsCtrl.addLike);
+
 module.exports = router;
