@@ -2,7 +2,7 @@ import sendRequest from "./send-request";
 
 const BASE_URL = "/api/posts";
 
-export function allPosts() {
+export function getAllPosts() {
   return sendRequest(`${BASE_URL}`);
 }
 
