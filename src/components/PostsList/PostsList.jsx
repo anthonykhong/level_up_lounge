@@ -10,7 +10,7 @@ export default function PostsList({
 }) {
   return (
     <>
-      <main className="flex justify-center flex-col">
+      <main className="flex justify-center flex-col pb-4">
         {posts.map((p, idx) => (
           <PostsListCard
             post={p}

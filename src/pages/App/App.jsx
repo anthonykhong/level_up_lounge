@@ -7,6 +7,7 @@ import HomePage from "../HomePage/HomePage";
 import BlogPage from "../BlogPage/BlogPage";
 import NewBlog from "../NewBlog/NewBlog";
 import EditBlog from "../../components/EditBlog/EditBlog";
+import Footer from "../../components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
               element={<EditBlog user={user} setUser={setUser} />}
             />
           </Routes>
+          <hr />
+          <Footer />
         </>
       ) : (
         <AuthPage setUser={setUser} />

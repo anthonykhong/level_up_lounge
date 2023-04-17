@@ -10,7 +10,6 @@ export default function BlogPage({ user, setUser }) {
 
   async function fetchPosts() {
     const allPosts = await postsAPI.allPosts();
-    console.log("all", allPosts);
     setPosts(allPosts);
   }
 
@@ -45,7 +44,7 @@ export default function BlogPage({ user, setUser }) {
           All Posts
         </h1>
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center my-10">
         <input
           className="rounded-lg p-2 bg-gray-500"
           placeholder="Create Post.."
