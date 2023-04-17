@@ -7,7 +7,7 @@ export default function NewBlog({ user, setUser }) {
   const navigate = useNavigate();
 
   async function handleAddNewPost(formData) {
-    await postsAPI.createPost(formData);
+    await postsAPI.createNewPost(formData);
     navigate("/posts");
   }
 

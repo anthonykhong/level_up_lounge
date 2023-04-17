@@ -19,9 +19,13 @@ async function getPost(req, res) {
 }
 
 async function createPost(req, res) {
-  req.body.user = req.user._id;
-  const post = await Post.create(req.body);
-  res.json(post);
+  try {
+    req.body.user = req.user._id;
+    const post = await Post.create(req.body);
+    res.json(post);
+  } catch (error) {
+    res.status(500).json(error);
+  }
 }
 
 async function updatePost(req, res) {
