@@ -51,7 +51,7 @@ export default function PostsListCard({
         <h3 className="text-lg font-semibold">{post.title}</h3>
         <p className="mt-2 text-gray-500">{post.content}</p>
       </div>
-      <CommentPage />
+      <CommentPage user={user} post={post} />
     </div>
   );
 }
