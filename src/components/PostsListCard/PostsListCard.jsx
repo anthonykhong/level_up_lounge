@@ -15,7 +15,7 @@ export default function PostsListCard({
     handleEditPost(post._id);
   }
 
-  const currentUserCreatedPost = post.user === user._id;
+  const currentUserCreatedPost = user._id === post.user._id;
 
   const date = new Date(post.date);
   const currentDate = date.toLocaleString();
@@ -24,10 +24,9 @@ export default function PostsListCard({
     <div className="bg-neutral-300 rounded-lg shadow-md border border-gray-200 p-6 m-4 flex flex-col">
       <div className="flex justify-between">
         <div className="flex">
-          <h2>{post.user}</h2>
+          <h2>{post.user.name}</h2>
           <div>
-            <p className="text-gray-700 font-semibold">{post.user.name}</p>
-            <p className="text-gray-500 text-sm">{currentDate}</p>
+            <p className="text-gray-500 text-sm pl-2">{currentDate}</p>
           </div>
         </div>
         {currentUserCreatedPost && (
