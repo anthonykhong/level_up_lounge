@@ -7,7 +7,10 @@ import "./BlogPage.css";
 
 export default function BlogPage({ user, setUser }) {
   const navigate = useNavigate();
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([
+    { title: "Fire Emblem", content: "Awesome" },
+    { title: "Pokemon", content: "Awesome" },
+  ]);
 
   function handleCreatePostClick() {
     navigate("/posts/new");
