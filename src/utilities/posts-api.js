@@ -11,11 +11,11 @@ export function getPost(id) {
 }
 
 export function createPost(postData) {
-  return sendRequest(`${BASE_URL}/new`, "POST", postData);
+  return sendRequest(`${BASE_URL}`, "POST", postData);
 }
 
 export function deletePost(id) {
-  return sendRequest(`${BASE_URL}/${id}`, "DELETE");
+  return sendRequest(`${BASE_URL}/${id}`, "DELETE", { id });
 }
 
 export function updatePost(id, postData) {

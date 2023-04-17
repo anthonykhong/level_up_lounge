@@ -9,7 +9,7 @@ router.get("/posts", postsCtrl.allPosts);
 router.get("/posts/:id", postsCtrl.getPost);
 
 // POST a new post
-router.post("/posts/new", postsCtrl.createPost);
+router.post("/posts", postsCtrl.createPost);
 
 // DELETE a post
 router.delete("/posts/:id", postsCtrl.deletePost);
