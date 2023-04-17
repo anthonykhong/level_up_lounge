@@ -36,6 +36,7 @@ const postSchema = new Schema(
       ref: "User",
       required: true,
     },
+    userName: String,
     date: {
       type: Date,
       default: Date.now,

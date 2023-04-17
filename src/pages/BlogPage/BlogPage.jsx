@@ -43,11 +43,15 @@ export default function BlogPage({ user, setUser }) {
       <div className="flex justify-center mt-10">
         <input
           className="rounded-lg p-2 bg-gray-500"
-          placeHolder="Create Post.."
+          placeholder="Create Post.."
           onClick={handleCreatePostClick}
         ></input>
       </div>
-      <PostsList posts={posts} handleDeletePost={handleDeletePost} />
+      <PostsList
+        user={user}
+        posts={posts}
+        handleDeletePost={handleDeletePost}
+      />
     </div>
   );
 }
