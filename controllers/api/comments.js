@@ -62,8 +62,45 @@ async function deleteComment(req, res) {
   }
 }
 
+async function addCommentLike(req, res) {
+  try {
+    const user = req.user._id;
+    const post = await Post.findById(req.params.id);
+    const comment = await Comment.findById(req.params.commentId);
+
+    if (!comment.likes.includes(user)) {
+      comment.likes.push(user);
+      await comment.save();
+    }
+
+    res.json(comment);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+}
+
+async function removeCommentLike(req, res) {
+  try {
+    const user = req.user._id;
+    const post = await Post.findById(req.params.id);
+    const comment = await Comment.findById(req.params.commentId);
+
+    if (comment.likes.includes(user)) {
+      const index = comment.likes.indexOf(user);
+      comment.likes.splice(index, 1);
+      await comment.save();
+    }
+
+    res.json(comment);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+}
+
 module.exports = {
   getComment,
   addComment,
   deleteComment,
+  addCommentLike,
+  removeCommentLike,
 };
