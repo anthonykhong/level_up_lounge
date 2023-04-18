@@ -6,6 +6,7 @@ export default function CommentList({
   post,
   comments,
   handleDeleteComment,
+  handleLike,
 }) {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function CommentList({
             comment={c}
             key={idx}
             handleDeleteComment={handleDeleteComment}
+            handleLike={handleLike}
           />
         ))}
       </main>

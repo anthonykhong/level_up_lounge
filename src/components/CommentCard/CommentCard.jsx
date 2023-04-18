@@ -5,6 +5,7 @@ export default function CommentCard({
   post,
   comment,
   handleDeleteComment,
+  handleLike,
 }) {
   const currentUserComment = comment.user._id === user._id;
   const date = new Date(post.date);
@@ -17,6 +18,11 @@ export default function CommentCard({
       console.log(error);
     }
   }
+
+  function likeHandler() {
+    handleLike(comment._id);
+  }
+
   return (
     <div className="flex items-start justify-start border rounded-lg space-x-4 m-4">
       <div className="flex-1">
@@ -34,6 +40,12 @@ export default function CommentCard({
           </button>
         )}
       </div>
+      <button
+        className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white mb-4"
+        onClick={likeHandler}
+      >
+        Like ({comment.likes.length})
+      </button>
     </div>
   );
 }

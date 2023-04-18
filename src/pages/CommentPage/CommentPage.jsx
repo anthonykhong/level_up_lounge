@@ -39,6 +39,38 @@ export default function CommentPage({ user, post }) {
       .catch((error) => console.log(error));
   }
 
+  async function handleLike(commentId) {
+    try {
+      const comment = comments.find((c) => c._id === commentId);
+      if (comment.likes.includes(user._id)) {
+        await commentsAPI.removeCommentLike(post._id, commentId);
+        setComments(
+          comments.map((c) => {
+            if (c._id === commentId) {
+              return {
+                ...c,
+                likes: c.likes.filter((like) => like !== user._id),
+              };
+            }
+            return c;
+          })
+        );
+      } else {
+        await commentsAPI.addCommentLike(post._id, commentId);
+        setComments(
+          comments.map((c) => {
+            if (c._id === commentId) {
+              return { ...c, likes: [...c.likes, user._id] };
+            }
+            return c;
+          })
+        );
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="container bg-neutral-400 border rounded-lg mx-auto px-4 py-6">
       <h1 className="text-lg font-bold text-gray-900 mb-4">Comments</h1>
@@ -48,6 +80,7 @@ export default function CommentPage({ user, post }) {
         comments={comments}
         setComments={setComments}
         handleDeleteComment={handleDeleteComment}
+        handleLike={handleLike}
       />
       <NewComment
         setComments={setComments}
