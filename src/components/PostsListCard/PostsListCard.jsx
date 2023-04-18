@@ -7,6 +7,7 @@ export default function PostsListCard({
   post,
   handleDeletePost,
   handleEditPost,
+  handleLike,
 }) {
   const [showComments, setShowComments] = useState(false);
   const currentUserPost = user._id === post.user._id;
@@ -19,6 +20,10 @@ export default function PostsListCard({
 
   function handleEdit() {
     handleEditPost(post._id);
+  }
+
+  function likeHandler() {
+    handleLike(post._id);
   }
 
   return (
@@ -50,6 +55,12 @@ export default function PostsListCard({
       <div className="mt-4">
         <h3 className="text-lg font-semibold">{post.title}</h3>
         <p className="mt-2 text-gray-500 py-6">{post.content}</p>
+        <button
+          className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white mb-4"
+          onClick={likeHandler}
+        >
+          Like ({post.likes.length})
+        </button>
       </div>
       <button
         className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white mb-4"

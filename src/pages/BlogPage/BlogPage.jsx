@@ -33,12 +33,33 @@ export default function BlogPage({ user }) {
     navigate("/posts/new");
   }
 
-  async function handleAddLike(id) {
+  async function handleLike(id) {
     try {
-      const updatedPost = await postsAPI.addLike(id);
-      setPosts(
-        posts.map((post) => (post._id === updatedPost._id ? updatedPost : post))
-      );
+      const post = posts.find((post) => post._id === id);
+      if (post.likes.includes(user._id)) {
+        await postsAPI.removeLike(id);
+        setPosts(
+          posts.map((post) => {
+            if (post._id === id) {
+              return {
+                ...post,
+                likes: post.likes.filter((like) => like !== user._id),
+              };
+            }
+            return post;
+          })
+        );
+      } else {
+        await postsAPI.addLike(id);
+        setPosts(
+          posts.map((post) => {
+            if (post._id === id) {
+              return { ...post, likes: [...post.likes, user._id] };
+            }
+            return post;
+          })
+        );
+      }
     } catch (error) {
       console.error(error);
     }
@@ -66,7 +87,7 @@ export default function BlogPage({ user }) {
         posts={posts}
         handleDeletePost={handleDeletePost}
         handleEditPost={handleEditPost}
-        handleAddLike={handleAddLike}
+        handleLike={handleLike}
       />
     </div>
   );
