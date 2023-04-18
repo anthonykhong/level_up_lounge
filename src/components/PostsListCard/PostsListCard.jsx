@@ -9,7 +9,7 @@ export default function PostsListCard({
   handleEditPost,
   handleLike,
 }) {
-  const [showComments, setShowComments] = useState(false);
+  const [showComments, setShowComments] = useState(true);
   const currentUserPost = user._id === post.user._id;
   const date = new Date(post.date);
   const currentDate = date.toLocaleString();
