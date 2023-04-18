@@ -66,6 +66,24 @@ async function addLike(req, res) {
   }
 }
 
+async function removeLike(req, res) {
+  try {
+    const user = req.user._id;
+    const post = await Post.findById(req.params.id);
+
+    if (post.likes.includes(user)) {
+      post.likes = post.likes.filter(
+        (userId) => userId.toString() !== user.toString()
+      );
+      await post.save();
+    }
+
+    res.json(post);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+}
+
 module.exports = {
   allPosts,
   getPost,
@@ -73,4 +91,5 @@ module.exports = {
   updatePost,
   deletePost,
   addLike,
+  removeLike,
 };

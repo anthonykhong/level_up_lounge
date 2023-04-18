@@ -25,3 +25,7 @@ export function updatePost(id, postData) {
 export function addLike(id) {
   return sendRequest(`${BASE_URL}/${id}/like`, "POST");
 }
+
+export function removeLike(id) {
+  return sendRequest(`${BASE_URL}/${id}/like`, "DELETE");
+}
