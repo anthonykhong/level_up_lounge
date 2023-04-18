@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NewComment from "../NewComment/NewComment";
 import CommentList from "../../components/CommentList/CommentList";
 import * as commentsAPI from "../../utilities/comments-api";
 
 export default function CommentPage({ user, post }) {
   const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    async function getComments() {
+      try {
+        const fetchedComments = await commentsAPI.getComments(post._id);
+        setComments(fetchedComments);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getComments();
+  }, [post._id]);
 
   const addCommentHandler = async (commentData) => {
     console.log(commentData);
@@ -19,7 +31,12 @@ export default function CommentPage({ user, post }) {
   return (
     <div>
       <>Comment Section</>
-      <CommentList user={user} comments={comments} setComments={setComments} />
+      <CommentList
+        post={post}
+        user={user}
+        comments={comments}
+        setComments={setComments}
+      />
       <NewComment addCommentHandler={addCommentHandler} />
     </div>
   );
