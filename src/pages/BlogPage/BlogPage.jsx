@@ -8,12 +8,11 @@ export default function BlogPage({ user, setUser }) {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
 
-  async function fetchPosts() {
-    const allPosts = await postsAPI.getAllPosts();
-    setPosts(allPosts);
-  }
-
   useEffect(() => {
+    async function fetchPosts() {
+      const allPosts = await postsAPI.getAllPosts();
+      setPosts(allPosts);
+    }
     fetchPosts();
   }, []);
 
