@@ -23,6 +23,8 @@ export default function CommentPage({ user, post }) {
     try {
       const newComment = await commentsAPI.addComment(post._id, commentData);
       setComments((prevComments) => [...prevComments, newComment]);
+      const fetchedComments = await commentsAPI.getComments(post._id);
+      setComments(fetchedComments);
     } catch (error) {
       console.log(error);
     }
@@ -75,7 +77,6 @@ export default function CommentPage({ user, post }) {
     <div className="container bg-neutral-400 border rounded-lg mx-auto px-4 py-6">
       <h1 className="text-lg font-bold text-gray-900 mb-4">Comments</h1>
       <CommentList
-        post={post}
         user={user}
         comments={comments}
         setComments={setComments}
