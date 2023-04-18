@@ -6,7 +6,7 @@ export default function CommentList({ user, post, comments }) {
     <div>
       <main>
         {comments.map((c, idx) => (
-          <CommentCard user={user} comment={c} key={idx} />
+          <CommentCard user={user} post={post} comment={c} key={idx} />
         ))}
       </main>
     </div>

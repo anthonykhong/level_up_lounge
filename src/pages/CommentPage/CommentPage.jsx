@@ -18,7 +18,7 @@ export default function CommentPage({ user, post }) {
     getComments();
   }, [post._id]);
 
-  const addCommentHandler = async (commentData) => {
+  const handleAddComment = async (commentData) => {
     console.log(commentData);
     try {
       const newComment = await commentsAPI.addComment(post._id, commentData);
@@ -37,7 +37,10 @@ export default function CommentPage({ user, post }) {
         comments={comments}
         setComments={setComments}
       />
-      <NewComment addCommentHandler={addCommentHandler} />
+      <NewComment
+        setComments={setComments}
+        handleAddComment={handleAddComment}
+      />
     </div>
   );
 }
