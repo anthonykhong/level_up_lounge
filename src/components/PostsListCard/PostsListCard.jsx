@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CommentPage from "../../pages/CommentPage/CommentPage";
 import "./PostsListCard.css";
 
@@ -8,6 +8,8 @@ export default function PostsListCard({
   handleDeletePost,
   handleEditPost,
 }) {
+  const [showComments, setShowComments] = useState(false);
+
   function handleDelete() {
     handleDeletePost(post._id);
   }
@@ -49,9 +51,15 @@ export default function PostsListCard({
       </div>
       <div className="mt-4">
         <h3 className="text-lg font-semibold">{post.title}</h3>
-        <p className="mt-2 text-gray-500">{post.content}</p>
+        <p className="mt-2 text-gray-500 py-6">{post.content}</p>
       </div>
-      <CommentPage user={user} post={post} />
+      <button
+        className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white mb-4"
+        onClick={() => setShowComments(!showComments)}
+      >
+        {showComments ? "Hide Comments" : "Show Comments"}
+      </button>
+      {showComments && <CommentPage user={user} post={post} />}
     </div>
   );
 }
