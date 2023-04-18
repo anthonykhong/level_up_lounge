@@ -4,7 +4,7 @@ import * as postsAPI from "../../utilities/posts-api";
 import PostsList from "../../components/PostsList/PostsList";
 import "./BlogPage.css";
 
-export default function BlogPage({ user, setUser }) {
+export default function BlogPage({ user }) {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
 

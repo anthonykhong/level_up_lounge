@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./NewBlogForm.css";
 
 export default function NewBlogForm({ handleAddNewPost, navigate }) {

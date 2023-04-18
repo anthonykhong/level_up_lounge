@@ -2,17 +2,17 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer class="flex flex-col footer footer-center p-8 bg-primary text-primary-content">
+    <footer className="flex flex-col footer footer-center p-8 bg-primary text-primary-content">
       <div className="text-center text-md text-white">
         <p>Level Up Lounge</p>
         <p>Copyright © 2023 - All rights reserved</p>
       </div>
       <div>
-        <div class="flex justify-center items-center pt-2">
+        <div className="flex justify-center items-center pt-2">
           <a
             target="_blank"
             rel="noreferrer"
-            class="group"
+            className="group"
             aria-label="LevelUpLounge github page"
             href="https://github.com/anthonykhong/level_up_lounge"
           >
@@ -21,7 +21,7 @@ export default function Footer() {
               viewBox="3.61199951171875 5.103000164031982 120.7770004272461 117.79378509521484"
               width="36"
               height="36"
-              class="h-18 w-18 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+              className="h-18 w-18 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
             >
               <g fill="#181616">
                 <path
