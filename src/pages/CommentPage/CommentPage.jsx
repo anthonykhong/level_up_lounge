@@ -28,6 +28,17 @@ export default function CommentPage({ user, post }) {
     }
   };
 
+  function handleDeleteComment(commentId) {
+    commentsAPI
+      .deleteComment(post._id, commentId)
+      .then(() => {
+        setComments((prevComments) =>
+          prevComments.filter((c) => c._id !== commentId)
+        );
+      })
+      .catch((error) => console.log(error));
+  }
+
   return (
     <div className="container bg-neutral-400 border rounded-lg mx-auto px-4 py-6">
       <h1 className="text-lg font-bold text-gray-900 mb-4">Comments</h1>
@@ -36,6 +47,7 @@ export default function CommentPage({ user, post }) {
         user={user}
         comments={comments}
         setComments={setComments}
+        handleDeleteComment={handleDeleteComment}
       />
       <NewComment
         setComments={setComments}

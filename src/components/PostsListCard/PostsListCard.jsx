@@ -9,6 +9,9 @@ export default function PostsListCard({
   handleEditPost,
 }) {
   const [showComments, setShowComments] = useState(false);
+  const currentUserPost = user._id === post.user._id;
+  const date = new Date(post.date);
+  const currentDate = date.toLocaleString();
 
   function handleDelete() {
     handleDeletePost(post._id);
@@ -17,11 +20,6 @@ export default function PostsListCard({
   function handleEdit() {
     handleEditPost(post._id);
   }
-
-  const currentUserCreatedPost = user._id === post.user._id;
-
-  const date = new Date(post.date);
-  const currentDate = date.toLocaleString();
 
   return (
     <div className="bg-neutral-300 rounded-lg shadow-md border border-gray-200 p-6 m-4 flex flex-col">
@@ -32,7 +30,7 @@ export default function PostsListCard({
             <p className="text-gray-500 text-sm pl-2">{currentDate}</p>
           </div>
         </div>
-        {currentUserCreatedPost && (
+        {currentUserPost && (
           <div className="flex">
             <button
               onClick={handleEdit}
