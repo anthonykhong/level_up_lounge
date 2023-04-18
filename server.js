@@ -17,6 +17,12 @@ const ensureLoggedIn = require("./config/ensureLoggedIn");
 app.use("/api/posts/", require("./routes/api/comments"));
 app.use("/api/posts", require("./routes/api/posts"));
 
+// Error handler to check if route exists
+app.use(function (req, res) {
+  console.log(`route: ${req.path} does not exist`);
+  res.status(404, "route does not exist");
+});
+
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
