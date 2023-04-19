@@ -27,7 +27,7 @@ export default function PostsListCard({
   }
 
   return (
-    <div className="bg-neutral-800 rounded-lg shadow-md border border-gray-200 p-6 m-4 flex flex-col">
+    <div className="bg-neutral-800 rounded-lg shadow-md border border-gray-200 p-6 mb-6 md:mx-28 flex flex-col">
       <div className="flex justify-between">
         <div className="flex flex-col">
           <h2 className="text-white pb-1">{post.user.name}</h2>
@@ -37,21 +37,35 @@ export default function PostsListCard({
           <div className="flex">
             <button
               onClick={handleEdit}
-              className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded mr-4"
+              className="hover:bg-neutral-600 px-2 py-2 rounded"
             >
-              Edit
+              <div className="flex flex-row items-center">
+                <img
+                  className="h-6"
+                  src="./public/images/Edit.png"
+                  alt="Comment icon"
+                />
+              </div>
             </button>
             <button
               onClick={handleDelete}
-              className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-white"
+              className="hover:bg-neutral-600 px-2 py-2 rounded"
             >
-              Delete
+              <div className="flex flex-row items-center">
+                <img
+                  className="h-6"
+                  src="./public/images/delete.png"
+                  alt="Comment icon"
+                />
+              </div>
             </button>
           </div>
         )}
       </div>
       <div className="mt-4">
-        <h3 className="text-white text-xl font-semibold">{post.title}</h3>
+        <h3 className="font-display text-white text-xl font-semibold">
+          {post.title}
+        </h3>
         <p className="text-gray-400 py-6">{post.content}</p>
         <hr />
       </div>
@@ -73,7 +87,7 @@ export default function PostsListCard({
           </div>
         </button>
         <button
-          className="hover:bg-neutral-400 px-4 py-2 rounded text-white mb-2"
+          className="hover:bg-neutral-600 px-4 py-2 rounded text-white mb-2"
           onClick={() => setShowComments(!showComments)}
         >
           <div className="flex flex-row items-center">

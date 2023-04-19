@@ -6,7 +6,7 @@ export default function GameCard({ game }) {
       <img src={game.thumbnail} alt={game.title} />
       <h3>{game.title}</h3>
       <p>{game.short_description}</p>
-      <p>{game.game_url}</p>
+      <a>{game.game_url}</a>
     </div>
   );
 }

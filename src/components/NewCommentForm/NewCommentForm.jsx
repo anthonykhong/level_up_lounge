@@ -8,15 +8,15 @@ export default function NewCommentForm({
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="flex items-center rounded-md bg-gray-200 dark:bg-gray-800">
+        <div className="flex items-center rounded-md text-white">
           <input
-            className="flex-1 px-4 py-2 bg-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500"
+            className="flex-1 px-4 py-2 bg-transparent border rounded-lg mr-2"
             placeholder="Write a comment"
             type="text"
             value={comment}
             onChange={handleChange}
           />
-          <button className="px-4 py-2 font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500">
+          <button className="px-4 py-2 font-semibold text-white bg-purple-500 rounded-md hover:bg-purple-600">
             Post
           </button>
         </div>
