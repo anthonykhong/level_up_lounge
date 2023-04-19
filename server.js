@@ -3,6 +3,7 @@ const path = require("path");
 const logger = require("morgan");
 require("dotenv").config();
 require("./config/database");
+const http = require("http");
 const app = express();
 
 app.use(logger("dev"));
@@ -32,3 +33,6 @@ const port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log(`Express app running on port ${port}`);
 });
+
+const server = http.createServer(app);
+require("./io").init(server);
