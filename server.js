@@ -15,8 +15,8 @@ app.use(require("./config/checkTokens"));
 app.use("/api/users", require("./routes/api/users"));
 
 const ensureLoggedIn = require("./config/ensureLoggedIn");
-app.use("/api/posts/", require("./routes/api/comments"));
-app.use("/api/posts", require("./routes/api/posts"));
+app.use("/api/posts/", ensureLoggedIn, require("./routes/api/comments"));
+app.use("/api/posts", ensureLoggedIn, require("./routes/api/posts"));
 
 // Error handler to check if route exists
 app.use(function (req, res) {

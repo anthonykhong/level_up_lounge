@@ -1,7 +1,7 @@
 function init(server) {
   io = require("socket.io")(server);
   io.listen(3001);
-  // Tracks
+
   io.on("connection", (socket) => {
     console.log(`Connected at room.io: ${socket.id}`);
 
