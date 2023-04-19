@@ -32,10 +32,20 @@ export default function CommentCard({
         <p className="mt-1 text-gray-800 p-2">{comment.text}</p>
         <hr />
         <button
-          className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white m-2"
+          className="px-4 py-2 rounded text-black mb-2"
           onClick={likeHandler}
         >
-          Like ({comment.likes.length})
+          <div className="flex flex-row items-center">
+            <img
+              className="h-6 mr-1"
+              src={
+                comment.likes.length > 0
+                  ? "./public/images/heartFilled.png"
+                  : "./public/images/heartUnfilled.png"
+              }
+            />
+            {comment.likes.length}
+          </div>
         </button>
       </div>
       {currentUserComment && (

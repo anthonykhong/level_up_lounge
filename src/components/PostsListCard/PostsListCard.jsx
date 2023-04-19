@@ -29,11 +29,9 @@ export default function PostsListCard({
   return (
     <div className="bg-neutral-300 rounded-lg shadow-md border border-gray-200 p-6 m-4 flex flex-col">
       <div className="flex justify-between">
-        <div className="flex">
+        <div className="flex flex-col">
           <h2>{post.user.name}</h2>
-          <div>
-            <p className="text-gray-500 text-sm pl-2">{currentDate}</p>
-          </div>
+          <p className="text-gray-500 text-sm">{currentDate}</p>
         </div>
         {currentUserPost && (
           <div className="flex">
@@ -55,20 +53,40 @@ export default function PostsListCard({
       <div className="mt-4">
         <h3 className="text-lg font-semibold">{post.title}</h3>
         <p className="mt-2 text-gray-500 py-6">{post.content}</p>
+        <hr />
+      </div>
+      <div className="mt-2">
         <button
-          className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded text-white mb-4"
+          className="px-4 py-2 rounded text-black mb-2"
           onClick={likeHandler}
         >
-          Like ({post.likes.length})
+          <div className="flex flex-row items-center">
+            <img
+              className="h-6 mr-1"
+              src={
+                post.likes.length > 0
+                  ? "./public/images/heartFilled.png"
+                  : "./public/images/heartUnfilled.png"
+              }
+            />
+            {post.likes.length}
+          </div>
         </button>
+        <button
+          className="hover:bg-neutral-400 px-4 py-2 rounded text-white mb-2"
+          onClick={() => setShowComments(!showComments)}
+        >
+          <div className="flex flex-row items-center">
+            <img
+              className="h-6"
+              src="./public/images/comment.png"
+              alt="Comment icon"
+            />
+          </div>
+        </button>
+        <hr />
+        {showComments && <CommentPage user={user} post={post} />}
       </div>
-      <button
-        className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded text-white mb-4"
-        onClick={() => setShowComments(!showComments)}
-      >
-        {showComments ? "Hide Comments" : "Show Comments"}
-      </button>
-      {showComments && <CommentPage user={user} post={post} />}
     </div>
   );
 }

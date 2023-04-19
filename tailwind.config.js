@@ -6,6 +6,7 @@ export default {
     extend: {
       animation: {
         text: "text 5s ease infinite",
+        border: "border 4s ease infinite",
       },
       keyframes: {
         text: {
