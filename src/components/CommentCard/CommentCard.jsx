@@ -26,7 +26,7 @@ export default function CommentCard({
     <div className="bg-neutral-700 rounded-lg shadow-md border border-gray-200 p-2 m-4 flex flex-col">
       <div className="flex justify-between">
         <div className="flex flex-col">
-          <h2 className="text-white text-lg font-medium pr-2">
+          <h2 className="font-display text-white text-md font-medium pr-2">
             {comment.user.name}
           </h2>
           <p className="text-sm text-gray-400">{currentDate}</p>

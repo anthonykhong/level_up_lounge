@@ -75,7 +75,7 @@ export default function CommentPage({ user, post }) {
 
   return (
     <div className="container bg-neutral-700 border rounded-lg my-4 mx-auto px-4 py-6">
-      <h1 className="text-lg font-bold text-white mb-4">
+      <h1 className="font-display text-md font-bold text-white mb-4">
         Comments ({comments.length})
       </h1>
       <NewComment

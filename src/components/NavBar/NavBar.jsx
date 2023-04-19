@@ -17,21 +17,21 @@ export default function NavBar({ user, updateUser }) {
       &nbsp; &nbsp;
       <div>
         <Link
-          className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
+          className="font-display text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
           to="/"
         >
           Home
         </Link>
         &nbsp; &nbsp;
         <Link
-          className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
+          className="font-display text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
           to="/posts"
         >
           Posts
         </Link>
         &nbsp; &nbsp;
         <Link
-          className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
+          className="font-display text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
           to=""
           onClick={handleLogOut}
         >

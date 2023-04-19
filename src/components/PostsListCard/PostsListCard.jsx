@@ -30,7 +30,7 @@ export default function PostsListCard({
     <div className="bg-neutral-800 rounded-lg shadow-md border border-gray-200 p-6 mb-6 md:mx-28 flex flex-col">
       <div className="flex justify-between">
         <div className="flex flex-col">
-          <h2 className="text-white pb-1">{post.user.name}</h2>
+          <h2 className="font-display text-white pb-1">{post.user.name}</h2>
           <p className="text-gray-400 text-sm">{currentDate}</p>
         </div>
         {currentUserPost && (
