@@ -5,8 +5,11 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getGames() {
-      const gameData = await fetch("https://www.freetogame.com/api/games");
+      const gameData = await fetch(
+        "http://www.freetogame.com/api/games?platform=pc"
+      );
       const gamesJson = await gameData.json();
+      console.log(gamesJson);
       setGames(gamesJson);
     }
     getGames();
@@ -19,7 +22,6 @@ export default function HomePage() {
       </h1>
 
       <div className="my-5">
-        <h2>Free to Play Games:</h2>
         <ul>
           {games.map((game) => (
             <li key={game.id}>
