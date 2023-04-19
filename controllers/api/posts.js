@@ -4,7 +4,6 @@ const User = require("../../models/user");
 async function allPosts(req, res) {
   try {
     const posts = await Post.find({}).populate("user").sort({ date: -1 });
-    console.log(posts);
     res.json(posts);
   } catch (error) {
     res.status(500).json(error);
