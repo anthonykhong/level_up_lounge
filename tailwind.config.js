@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "src/**/*.{jsx,js}"],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      display: ["Audiowide", "cursive"],
+    },
     extend: {
       animation: {
         text: "text 5s ease infinite",
@@ -17,9 +20,6 @@ export default {
           "50%": {
             "background-size": "200% 200%",
             "background-position": "right center",
-          },
-          fontFamily: {
-            inter: ["inter", "serif"],
           },
         },
       },
