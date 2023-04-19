@@ -10,7 +10,7 @@ export default function AuthPage({ setUser }) {
         <div className="flex items-center justify-even">
           <img className="h-10" src="./public/images/logo.png" />
           &nbsp; &nbsp;
-          <h1 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black">
+          <h1 className="font-display animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black">
             Level Up Lounge
           </h1>
         </div>

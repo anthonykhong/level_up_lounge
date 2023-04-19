@@ -71,13 +71,13 @@ export default function BlogPage({ user }) {
         <img className="w-full h-24" src="../../public/images/banner.png" />
       </div>
       <div className="flex justify-center items-center flex-row py-4 bg-neutral-800">
-        <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
+        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
           All Posts
         </h1>
       </div>
       <div className="flex justify-center my-10">
         <input
-          className="rounded-lg p-2 bg-gray-500"
+          className="mx-60 flex-1 rounded-lg p-2 bg-gray-500"
           placeholder="Create Post.."
           onClick={handleCreatePostClick}
         ></input>
