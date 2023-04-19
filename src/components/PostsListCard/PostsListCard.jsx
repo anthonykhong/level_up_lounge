@@ -27,11 +27,11 @@ export default function PostsListCard({
   }
 
   return (
-    <div className="bg-neutral-300 rounded-lg shadow-md border border-gray-200 p-6 m-4 flex flex-col">
+    <div className="bg-neutral-800 rounded-lg shadow-md border border-gray-200 p-6 m-4 flex flex-col">
       <div className="flex justify-between">
         <div className="flex flex-col">
-          <h2>{post.user.name}</h2>
-          <p className="text-gray-500 text-sm">{currentDate}</p>
+          <h2 className="text-white pb-1">{post.user.name}</h2>
+          <p className="text-gray-400 text-sm">{currentDate}</p>
         </div>
         {currentUserPost && (
           <div className="flex">
@@ -51,13 +51,13 @@ export default function PostsListCard({
         )}
       </div>
       <div className="mt-4">
-        <h3 className="text-lg font-semibold">{post.title}</h3>
-        <p className="mt-2 text-gray-500 py-6">{post.content}</p>
+        <h3 className="text-white text-xl font-semibold">{post.title}</h3>
+        <p className="text-gray-400 py-6">{post.content}</p>
         <hr />
       </div>
       <div className="mt-2">
         <button
-          className="px-4 py-2 rounded text-black mb-2"
+          className="px-4 py-2 rounded text-white mb-2"
           onClick={likeHandler}
         >
           <div className="flex flex-row items-center">
