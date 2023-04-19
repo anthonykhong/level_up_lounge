@@ -11,7 +11,9 @@ export default function NavBar({ user, updateUser }) {
 
   return (
     <nav className="NavBar">
-      <img className="h-8" src="./public/images/logo.png" />
+      <a href="/">
+        <img className="h-8" src="./public/images/logo.png" />
+      </a>
       &nbsp; &nbsp;
       <div>
         <Link
