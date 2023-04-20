@@ -77,7 +77,7 @@ export default function BlogPage({ user }) {
       </div>
       <div className="flex justify-center my-10">
         <input
-          className="mx-60 flex-1 rounded-lg p-2 bg-gray-500"
+          className="mx-64 flex-1 rounded-lg p-2 bg-gray-500"
           placeholder="Create Post.."
           onClick={handleCreatePostClick}
         ></input>

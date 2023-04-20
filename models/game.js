@@ -14,7 +14,11 @@ const gameSchema = new Schema({
     type: String,
     required: true,
   },
-  game_url: {
+  genre: {
+    type: String,
+    required: true,
+  },
+  publisher: {
     type: String,
     required: true,
   },

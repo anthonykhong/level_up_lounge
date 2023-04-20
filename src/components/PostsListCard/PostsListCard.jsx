@@ -27,7 +27,7 @@ export default function PostsListCard({
   }
 
   return (
-    <div className="bg-neutral-800 rounded-lg shadow-md border border-gray-200 p-6 mb-6 md:mx-28 flex flex-col">
+    <div className="bg-neutral-800 rounded-lg shadow-md border border-gray-200 p-6 mb-10 md:mx-28 flex flex-col">
       <div className="flex justify-between">
         <div className="flex flex-col">
           <h2 className="font-display text-white pb-1">{post.user.name}</h2>
