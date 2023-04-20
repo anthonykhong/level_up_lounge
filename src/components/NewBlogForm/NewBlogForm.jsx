@@ -26,67 +26,65 @@ export default function NewBlogForm({ handleAddNewPost, navigate }) {
         <img className="w-full h-24" src="../../public/images/banner.png" />
       </div>
       <div className="flex justify-center items-center flex-row py-4 bg-neutral-800">
-        <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
+        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
           New Post
         </h1>
       </div>
-      <div className="flex flex-col justify-center items-center m-10">
-        <div className="py-2 ml-auto">
-          <button
-            className="px-4 py-2 rounded-md bg-gradient-to-br from-purple-300 to-blue-600 text-white font-medium"
-            onClick={handleCancelPostClick}
-          >
-            Cancel
-          </button>
-        </div>
-        <form
-          className="border border-4 border-indigo-500/75 rounded-xl w-full py-10 px-20"
-          id="new-post"
-          onSubmit={handleSubmit}
-        >
-          <div className="max-w-lg">
-            <label
-              for="small-input"
-              className="block syne mb-2 text-sm font-medium text-white dark:text-white"
-            >
-              Title:
-            </label>
-            <input
-              type="text"
-              name="title"
-              id="small-input"
-              className="shadow appearance-none rounded w-full py-2 px-3 text-white bg-gray-500 leading-tight focus:outline-none focus:shadow-outline"
-              value={postData.title}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              for="large-input"
-              className="block syne mb-2 text-sm py-3 font-medium text-white dark:text-white"
-            >
-              Content:
-            </label>
-            <textarea
-              type="text"
-              name="content"
-              id="large-input"
-              placeholder="Enter text..."
-              className="shadow appearance-none rounded w-full py-2 px-3 text-white bg-gray-500 leading-tight focus:outline-none focus:shadow-outline"
-              value={postData.content}
-              onChange={handleChange}
-            ></textarea>
-          </div>
-          <div className="flex items-center justify-center">
-            <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-300 to-blue-600 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+      <div className="my-24 md:mx-28">
+        <div className="border border-white bg-neutral-800 rounded-xl w-full py-10 px-20">
+          <form id="new-post" onSubmit={handleSubmit}>
+            <div className="max-w-lg">
+              <label
+                for="small-input"
+                className="block mb-2 text-sm font-medium text-white"
+              >
+                Title:
+              </label>
               <input
-                type="submit"
-                value="Create Post"
-                className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+                type="text"
+                name="title"
+                id="small-input"
+                className="font-display font-bold rounded w-full py-2 px-3 text-white bg-neutral-700 "
+                value={postData.title}
+                onChange={handleChange}
               />
-            </button>
-          </div>
-        </form>
+            </div>
+            <div className="mb-6">
+              <label
+                for="large-input"
+                className="block syne mb-2 text-sm py-3 font-medium text-white"
+              >
+                Content:
+              </label>
+              <textarea
+                type="text"
+                name="content"
+                id="large-input"
+                placeholder="Enter text..."
+                className="shadow appearance-none rounded w-full pt-4 pb-28 px-3 text-white bg-neutral-700"
+                value={postData.content}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <hr />
+            <div className="flex items-center justify-center">
+              <div className="mr-2">
+                <button
+                  className="text-white rounded-lg bg-red-800 hover:bg-red-900 py-4 px-8 mt-6"
+                  onClick={handleCancelPostClick}
+                >
+                  Cancel
+                </button>
+              </div>
+              <button
+                type="submit"
+                className="text-white rounded-lg bg-purple-500 hover:bg-purple-600 p-4 mt-6"
+              >
+                Create Post
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
