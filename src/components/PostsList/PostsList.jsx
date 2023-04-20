@@ -1,6 +1,6 @@
 import React from "react";
 import "./PostsList.css";
-import PostsListCard from "../PostsListCard/PostsListCard";
+import PostsCard from "../PostsCard/PostsCard";
 
 export default function PostsList({
   user,
@@ -13,7 +13,7 @@ export default function PostsList({
     <>
       <main className="flex justify-center flex-col pb-4">
         {posts.map((p, idx) => (
-          <PostsListCard
+          <PostsCard
             post={p}
             user={user}
             handleDeletePost={handleDeletePost}

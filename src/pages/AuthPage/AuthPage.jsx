@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
+import "./AuthPage.css";
 
 export default function AuthPage({ setUser }) {
   const [show, setShow] = useState(false);
   return (
     <div className="flex flex-col md:flex-row justify-center items-center h-screen">
+      <style>{`body { background-image: url(https://res.cloudinary.com/diw7vmgum/image/upload/v1682022824/background_qag50w.gif); }`}</style>
       <section className="flex flex-col pr-20">
         <div className="flex items-center justify-even">
           <img
@@ -29,21 +31,24 @@ export default function AuthPage({ setUser }) {
         )}
         <p className={`flex justify-center text-white ${show ? "hidden" : ""}`}>
           Don't have an account yet?{" "}
-          <a className="underline cursor-pointer" onClick={() => setShow(true)}>
-            Sign Up
+          <a className="cursor-pointer" onClick={() => setShow(true)}>
+            <span className=" pl-2 text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-500 hover:text-purple-800">
+              Sign Up
+            </span>
           </a>
         </p>
-        {show && (
-          <p className="text-white">
-            Already have an account?{" "}
-            <a
-              className="underline cursor-pointer"
-              onClick={() => setShow(false)}
-            >
-              Login
-            </a>
-          </p>
-        )}
+        <div className="flex justify-center">
+          {show && (
+            <p className="text-white">
+              Already have an account?{" "}
+              <a className="cursor-pointer" onClick={() => setShow(false)}>
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-500 hover:text-purple-800">
+                  Login{" "}
+                </span>
+              </a>
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );

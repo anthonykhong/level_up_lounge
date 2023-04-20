@@ -67,6 +67,7 @@ export default function BlogPage({ user }) {
 
   return (
     <div>
+      <style>{`body { background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjcyNDUyMzllYzMzNzQ1MWJmMDY5NjZiMjZmNDNkMDc0OTBjNWE0NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/I3LHUdpJsgcZQkSImh/giphy.gif"); }`}</style>
       <div>
         <img
           className="w-full h-24"
@@ -74,7 +75,7 @@ export default function BlogPage({ user }) {
         />
       </div>
       <div className="flex justify-center items-center flex-row py-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900">
-        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-700 via-violet-600 to-blue-600 text-5xl">
+        <h1 className="font-display animate-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-600 bg-clip-text text-transparent text-5xl">
           Discussion Board
         </h1>
       </div>

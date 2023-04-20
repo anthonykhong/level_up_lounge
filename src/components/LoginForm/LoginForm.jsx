@@ -67,7 +67,9 @@ export default function LoginForm({ setUser }) {
               </span>
             </button>
           </div>
-          <p className="error-message">&nbsp;{error}</p>
+          <div className="flex justify-center font-display pt-2">
+            <p className="error-message">&nbsp;{error}</p>
+          </div>
         </form>
       </div>
     </div>

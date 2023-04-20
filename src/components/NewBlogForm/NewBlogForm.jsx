@@ -22,14 +22,15 @@ export default function NewBlogForm({ handleAddNewPost, navigate }) {
 
   return (
     <div>
+      <style>{`body { background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjcyNDUyMzllYzMzNzQ1MWJmMDY5NjZiMjZmNDNkMDc0OTBjNWE0NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/I3LHUdpJsgcZQkSImh/giphy.gif"); }`}</style>
       <div>
         <img
           className="w-full h-24"
-          src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013853/banner2_luvmvg.jpg"
+          src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682028773/wallpaperflare.com_wallpaper_1_yplyko.jpg"
         />
       </div>
       <div className="flex justify-center items-center flex-row py-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900">
-        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-700 via-teal-400 to-violet-800 text-5xl">
+        <h1 className="font-display animate-text bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent text-5xl text-5xl">
           New Post
         </h1>
       </div>

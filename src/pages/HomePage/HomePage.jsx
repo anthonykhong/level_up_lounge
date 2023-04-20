@@ -22,6 +22,7 @@ export default function HomePage() {
 
   return (
     <div className="flex justify-center flex-col items-center mt-28">
+      <style>{`body { background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjcyNDUyMzllYzMzNzQ1MWJmMDY5NjZiMjZmNDNkMDc0OTBjNWE0NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/I3LHUdpJsgcZQkSImh/giphy.gif"); }`}</style>
       <h1 className="font-display animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black">
         Level Up Lounge
       </h1>
@@ -35,7 +36,7 @@ export default function HomePage() {
               onClick={handleRenderPosts}
               className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-white rounded-lg group bg-gradient-to-br from-red-600 to-purple-600 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
             >
-              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-neutral-800 rounded-md group-hover:bg-opacity-0">
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-black rounded-md group-hover:bg-opacity-0">
                 Click Here to <span className="font-display">Start</span> Gamer
               </span>
             </button>
@@ -75,7 +76,7 @@ export default function HomePage() {
             onClick={() => setShowGames(!showGames)}
             className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-white rounded-lg group bg-gradient-to-br from-red-600 to-purple-600 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
           >
-            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-neutral-800 rounded-md group-hover:bg-opacity-0">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-black rounded-md group-hover:bg-opacity-0">
               {showGames ? "Hide Collection" : "Show Collection"}
             </span>
           </button>
