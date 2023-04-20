@@ -36,10 +36,13 @@ export default function EditBlog() {
   return (
     <div>
       <div>
-        <img className="w-full h-24" src="../../public/images/banner.png" />
+        <img
+          className="w-full h-24"
+          src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013853/banner2_luvmvg.jpg"
+        />
       </div>
-      <div className="flex justify-center items-center flex-row py-4 bg-neutral-800">
-        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
+      <div className="flex justify-center items-center flex-row py-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900">
+        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 via-pink-600 to-blue-500 text-5xl">
           Edit Post
         </h1>
       </div>
@@ -72,12 +75,14 @@ export default function EditBlog() {
               ></textarea>
             </div>
             <hr />
-            <div className="flex justify-center">
+            <div className="flex items-center justify-center pt-16">
               <button
                 type="submit"
-                className="text-white rounded-lg bg-purple-500 hover:bg-purple-600 p-2 mt-6"
+                className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-white rounded-lg group bg-gradient-to-br from-pink-600 to-blue-600 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
               >
-                Save Changes
+                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-neutral-800 rounded-md group-hover:bg-opacity-0">
+                  <span className="font-display">Save</span> Changes
+                </span>
               </button>
             </div>
           </form>

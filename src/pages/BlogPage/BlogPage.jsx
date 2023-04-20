@@ -68,10 +68,13 @@ export default function BlogPage({ user }) {
   return (
     <div>
       <div>
-        <img className="w-full h-24" src="../../public/images/banner.png" />
+        <img
+          className="w-full h-24"
+          src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013853/banner2_luvmvg.jpg"
+        />
       </div>
-      <div className="flex justify-center items-center flex-row py-4 bg-neutral-800">
-        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
+      <div className="flex justify-center items-center flex-row py-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900">
+        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-700 via-violet-600 to-blue-600 text-5xl">
           Discussion Board
         </h1>
       </div>

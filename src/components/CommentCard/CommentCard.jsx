@@ -39,7 +39,7 @@ export default function CommentCard({
             <div className="flex flex-row items-center">
               <img
                 className="h-6"
-                src="./public/images/delete.png"
+                src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013449/delete_q7jh3x.png"
                 alt="Comment icon"
               />
             </div>
@@ -59,8 +59,8 @@ export default function CommentCard({
                 className="h-6 mr-1"
                 src={
                   comment.likes.length > 0
-                    ? "./public/images/heartFilled.png"
-                    : "./public/images/heartUnfilled.png"
+                    ? "https://res.cloudinary.com/diw7vmgum/image/upload/v1682014169/heartFilled_xyvodg.png"
+                    : "https://res.cloudinary.com/diw7vmgum/image/upload/v1682014134/heartUnfilled_waihpl.png"
                 }
               />
               {comment.likes.length}

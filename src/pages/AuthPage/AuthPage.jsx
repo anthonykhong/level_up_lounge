@@ -8,7 +8,10 @@ export default function AuthPage({ setUser }) {
     <div className="flex flex-col md:flex-row justify-center items-center h-screen">
       <section className="flex flex-col pr-20">
         <div className="flex items-center justify-even">
-          <img className="h-10" src="./public/images/logo.png" />
+          <img
+            className="h-10"
+            src="https://res-console.cloudinary.com/diw7vmgum/thumbnails/v1/image/upload/v1682013182/bG9nb19kM3FwZjU=/preview"
+          />
           &nbsp; &nbsp;
           <h1 className="font-display animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black">
             Level Up Lounge

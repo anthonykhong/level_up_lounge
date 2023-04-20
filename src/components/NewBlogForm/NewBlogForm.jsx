@@ -23,16 +23,31 @@ export default function NewBlogForm({ handleAddNewPost, navigate }) {
   return (
     <div>
       <div>
-        <img className="w-full h-24" src="../../public/images/banner.png" />
+        <img
+          className="w-full h-24"
+          src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013853/banner2_luvmvg.jpg"
+        />
       </div>
-      <div className="flex justify-center items-center flex-row py-4 bg-neutral-800">
-        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
+      <div className="flex justify-center items-center flex-row py-4 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900">
+        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-700 via-teal-400 to-violet-800 text-5xl">
           New Post
         </h1>
       </div>
       <div className="my-24 md:mx-28">
-        <div className="border border-white bg-neutral-800 rounded-xl w-full py-10 px-20">
-          <form id="new-post" onSubmit={handleSubmit}>
+        <div className="border border-white bg-neutral-800 rounded-xl w-full">
+          <div className="flex justify-end p-2">
+            <button
+              className="text-white rounded-lg hover:bg-neutral-600 py-2 px-2"
+              onClick={handleCancelPostClick}
+            >
+              <img
+                className="h-6"
+                src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013449/delete_q7jh3x.png"
+                alt="Comment icon"
+              />
+            </button>
+          </div>
+          <form className="px-20 py-10" id="new-post" onSubmit={handleSubmit}>
             <div className="max-w-lg">
               <label
                 for="small-input"
@@ -67,20 +82,14 @@ export default function NewBlogForm({ handleAddNewPost, navigate }) {
               ></textarea>
             </div>
             <hr />
-            <div className="flex items-center justify-center">
-              <div className="mr-2">
-                <button
-                  className="text-white rounded-lg bg-red-800 hover:bg-red-900 py-4 px-8 mt-6"
-                  onClick={handleCancelPostClick}
-                >
-                  Cancel
-                </button>
-              </div>
+            <div className="flex items-center justify-center pt-8">
               <button
                 type="submit"
-                className="text-white rounded-lg bg-purple-500 hover:bg-purple-600 p-4 mt-6"
+                className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-white rounded-lg group bg-gradient-to-br from-pink-400 to-blue-400 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
               >
-                Create Post
+                <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-neutral-800 rounded-md group-hover:bg-opacity-0">
+                  <span className="font-display">Create</span> Post
+                </span>
               </button>
             </div>
           </form>

@@ -42,7 +42,7 @@ export default function PostsListCard({
               <div className="flex flex-row items-center">
                 <img
                   className="h-6"
-                  src="./public/images/Edit.png"
+                  src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013994/Edit_noqugx.png"
                   alt="Comment icon"
                 />
               </div>
@@ -54,7 +54,7 @@ export default function PostsListCard({
               <div className="flex flex-row items-center">
                 <img
                   className="h-6"
-                  src="./public/images/delete.png"
+                  src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682013449/delete_q7jh3x.png"
                   alt="Comment icon"
                 />
               </div>
@@ -79,8 +79,8 @@ export default function PostsListCard({
               className="h-6 mr-1"
               src={
                 post.likes.length > 0
-                  ? "./public/images/heartFilled.png"
-                  : "./public/images/heartUnfilled.png"
+                  ? "https://res.cloudinary.com/diw7vmgum/image/upload/v1682014169/heartFilled_xyvodg.png"
+                  : "https://res.cloudinary.com/diw7vmgum/image/upload/v1682014134/heartUnfilled_waihpl.png"
               }
             />
             {post.likes.length}
@@ -93,7 +93,7 @@ export default function PostsListCard({
           <div className="flex flex-row items-center">
             <img
               className="h-6"
-              src="./public/images/comment.png"
+              src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682014097/comment_mdefor.png"
               alt="Comment icon"
             />
           </div>

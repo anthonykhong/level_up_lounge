@@ -59,7 +59,12 @@ export default function HomePage() {
           </span>{" "}
           together!
         </p>
-        <img className="p-16" src="./public/images/homepagegif.gif" />
+        <div className="flex justify-center">
+          <img
+            className="p-16"
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGY5MTE1OTJjZDUwMWU5MGFmOTdmZTVhNDk4ZGQ5MWU4OThhODFmMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/ZXecgcubOb15prqQ54/giphy.gif"
+          />
+        </div>
       </div>
       <div className="mt-20 mb-10 mx-10">
         <h2 className="flex justify-center font-display animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-4xl mb-20">

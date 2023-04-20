@@ -16,8 +16,13 @@ export default function NewCommentForm({
             value={comment}
             onChange={handleChange}
           />
-          <button className="px-4 py-2 font-semibold text-white bg-purple-500 rounded-md hover:bg-purple-600">
-            Post
+          <button
+            type="submit"
+            className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xl font-medium text-white rounded-lg group bg-gradient-to-br from-pink-600 to-teal-400 group-hover:from-purple-300 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+          >
+            <span className="relative px-5 py-2 transition-all ease-in duration-75 bg-neutral-700 rounded-md group-hover:bg-opacity-0">
+              <span className="font-display">Post</span>
+            </span>
           </button>
         </div>
       </form>

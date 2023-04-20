@@ -12,7 +12,10 @@ export default function NavBar({ user, updateUser }) {
   return (
     <nav className="NavBar">
       <a href="/">
-        <img className="h-8" src="./public/images/logo.png" />
+        <img
+          className="h-8"
+          src="https://res-console.cloudinary.com/diw7vmgum/thumbnails/v1/image/upload/v1682013182/bG9nb19kM3FwZjU=/preview"
+        />
       </a>
       &nbsp; &nbsp;
       <div>
