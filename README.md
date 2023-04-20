@@ -51,25 +51,37 @@ Click the following links to be redirected to the planning board of the code!
 
 ![login](https://user-images.githubusercontent.com/116925227/233503742-c691439e-e997-455a-a124-c74214942fdc.gif)
 
+Sign up now to join our community! If already a user, simply login.
+
 ### Home Page
 
 ![homepage2](https://user-images.githubusercontent.com/116925227/233504117-09f9b0b0-338d-47f6-886a-417ea033f9a9.gif)
+
+Find a list of suggested free-to-play games on the home page.
 
 ### Discussion Page
 
 ![blogpage](https://user-images.githubusercontent.com/116925227/233504217-bcbc0c0c-f84f-4a56-b221-4e0495f21639.gif)
 
+Here, users are able to interact with one another.
+
 ### Create a new post!
 
 ![create post](https://user-images.githubusercontent.com/116925227/233504261-93d6a8c7-f2cf-4c6d-abec-4ed7b3db8c48.gif)
+
+Feel free to share your thoughts with other gamers by creating a post!
 
 ### Edit a post
 
 ![editpost](https://user-images.githubusercontent.com/116925227/233504816-bb3fe939-280f-4a3c-862e-430b022873ce.gif)
 
+Is their a new update? Edit your post to keep the community up to date!
+
 ### Add :heart: and comments on a post!
 
 ![likecomment](https://user-images.githubusercontent.com/116925227/233504640-bf5f5321-ed5e-40d2-8eea-34ea9382f402.gif)
+
+Find an interesting post? Exchange with the author and like their post to show interest!
 
 ## :computer: Technologies Used
 
