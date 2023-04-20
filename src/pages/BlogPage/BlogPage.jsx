@@ -72,7 +72,7 @@ export default function BlogPage({ user }) {
       </div>
       <div className="flex justify-center items-center flex-row py-4 bg-neutral-800">
         <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
-          All Posts
+          Discussion Board
         </h1>
       </div>
       <div className="flex justify-center my-10">

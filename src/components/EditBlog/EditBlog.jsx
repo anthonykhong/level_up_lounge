@@ -39,7 +39,7 @@ export default function EditBlog() {
         <img className="w-full h-24" src="../../public/images/banner.png" />
       </div>
       <div className="flex justify-center items-center flex-row py-4 bg-neutral-800">
-        <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
+        <h1 className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-blue-600 text-5xl">
           Edit Post
         </h1>
       </div>
