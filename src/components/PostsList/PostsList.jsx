@@ -1,5 +1,4 @@
 import React from "react";
-import "./PostsList.css";
 import PostsCard from "../PostsCard/PostsCard";
 
 export default function PostsList({

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./NewBlogForm.css";
 
 export default function NewBlogForm({ handleAddNewPost, navigate }) {
   const [postData, setPostData] = useState({

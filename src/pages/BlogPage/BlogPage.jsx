@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as postsAPI from "../../utilities/posts-api";
 import PostsList from "../../components/PostsList/PostsList";
-import "./BlogPage.css";
 
 export default function BlogPage({ user }) {
   const navigate = useNavigate();

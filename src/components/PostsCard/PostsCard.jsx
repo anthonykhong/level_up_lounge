@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import CommentPage from "../../pages/CommentPage/CommentPage";
-import "./PostsCard.css";
 
 export default function PostsListCard({
   user,
