@@ -70,7 +70,7 @@ export default function HomePage() {
       </div>
       <div className="mt-20 mb-10 mx-10">
         <h2 className="flex justify-center font-display animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-4xl mb-20">
-          Browse Collection
+          Discover New Games
         </h2>
         <div className="flex justify-center mb-10">
           <button
