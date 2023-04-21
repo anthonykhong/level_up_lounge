@@ -13,7 +13,7 @@ export default function NavBar({ updateUser }) {
       <a href="/">
         <img
           className="h-8"
-          src="https://res-console.cloudinary.com/diw7vmgum/thumbnails/v1/image/upload/v1682013182/bG9nb19kM3FwZjU=/preview"
+          src="https://res.cloudinary.com/diw7vmgum/image/upload/v1682056405/logo_bt3xwm.png"
         />
       </a>
       &nbsp; &nbsp;
