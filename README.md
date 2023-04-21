@@ -75,7 +75,7 @@ Feel free to share your thoughts with other gamers by creating a post!
 
 ![editpost](https://user-images.githubusercontent.com/116925227/233504816-bb3fe939-280f-4a3c-862e-430b022873ce.gif)
 
-Is their a new update? Edit your post to keep the community up to date!
+Is there a new update? Edit your post to keep the community up to date!
 
 ### Add :heart: and comments on a post!
 
