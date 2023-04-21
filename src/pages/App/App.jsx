@@ -21,21 +21,15 @@ function App() {
     <main className="App">
       {user ? (
         <>
-          <NavBar user={user} updateUser={updateUser} />
+          <NavBar updateUser={updateUser} />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route
               path="/posts"
               element={<BlogPage user={user} setUser={setUser} />}
             />
-            <Route
-              path="/posts/new"
-              element={<NewBlog user={user} setUser={setUser} />}
-            />
-            <Route
-              path="/posts/:id/edit"
-              element={<EditBlog user={user} setUser={setUser} />}
-            />
+            <Route path="/posts/new" element={<NewBlog />} />
+            <Route path="/posts/:id/edit" element={<EditBlog />} />
           </Routes>
           <hr />
           <Footer />

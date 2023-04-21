@@ -1,6 +1,5 @@
 const Post = require("../../models/post");
 const Comment = require("../../models/comment");
-const User = require("../../models/user");
 
 async function getComment(req, res) {
   try {
@@ -10,7 +9,6 @@ async function getComment(req, res) {
         path: "user",
       },
     });
-
     if (!post) {
       return res.status(404).json({ message: "Post not found" });
     }
@@ -65,7 +63,6 @@ async function deleteComment(req, res) {
 async function addCommentLike(req, res) {
   try {
     const user = req.user._id;
-    const post = await Post.findById(req.params.id);
     const comment = await Comment.findById(req.params.commentId);
 
     if (!comment.likes.includes(user)) {
@@ -82,7 +79,6 @@ async function addCommentLike(req, res) {
 async function removeCommentLike(req, res) {
   try {
     const user = req.user._id;
-    const post = await Post.findById(req.params.id);
     const comment = await Comment.findById(req.params.commentId);
 
     if (comment.likes.includes(user)) {

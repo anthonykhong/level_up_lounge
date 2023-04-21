@@ -1,9 +1,8 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
 import "./NavBar.css";
 
-export default function NavBar({ user, updateUser }) {
+export default function NavBar({ updateUser }) {
   function handleLogOut() {
     userService.logOut();
     updateUser(null);
@@ -30,7 +29,7 @@ export default function NavBar({ user, updateUser }) {
           className="font-display text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-500 to-blue-600 hover:text-purple-700"
           to="/posts"
         >
-          Posts
+          Forum
         </Link>
         &nbsp; &nbsp;
         <Link

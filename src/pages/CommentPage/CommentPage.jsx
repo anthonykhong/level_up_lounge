@@ -78,10 +78,7 @@ export default function CommentPage({ user, post }) {
       <h1 className="font-display text-md font-bold text-white mb-4">
         Comments ({comments.length})
       </h1>
-      <NewComment
-        setComments={setComments}
-        handleAddComment={handleAddComment}
-      />
+      <NewComment handleAddComment={handleAddComment} />
       <CommentList
         user={user}
         comments={comments}
