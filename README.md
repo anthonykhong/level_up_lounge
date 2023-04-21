@@ -133,7 +133,7 @@ async function removeLike(req, res) {
 
 ```
 
-### These preceeding code snippets displays the like functionality, a staple social media feautre which allows users to express their appreciation for a post. These blocks of code specifically allows the user to like and remove their like on a specific post!
+### These preceeding code snippets displays the like functionality, a staple social media feature which allows users to express their appreciation for a post. These blocks of code specifically allows the user to like and remove their like on a specific post!
 
 ## :chart_with_upwards_trend: Looking Forward
 
